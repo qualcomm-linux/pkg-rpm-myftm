@@ -2,31 +2,34 @@
 
 Name:           myftm
 Version:        1.0.0
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Qualcomm WLAN myftm factory test utility
 
 License:        Qualcomm-Technologies-Inc.-Proprietary
-Source0:        %{name}-prebuilt-%{version}.tar.gz
+Source0:        https://qartifactory-edge.qualcomm.com/artifactory/qsc_releases/software/chip/component/wlan-service.qclinux.0.0/260825/prebuilt_resolute/ath6kl-utils_%{version}_arm64.tar.gz
 
 ExclusiveArch:  aarch64
 
 %description
-myftm is packaged from a prebuilt payload tarball for Qualcomm Linux platforms.
+myftm is packaged from a Qualcomm Linux release tarball.
 
 %prep
-%autosetup -n %{name}-prebuilt-%{version}
+%autosetup -c -n %{name}-%{version}
 
 %build
 # Prebuilt payload package: nothing to compile.
 
 %install
 mkdir -p %{buildroot}
-cp -a . %{buildroot}/
+cp -a data/ath6kl-utils/arm64/. %{buildroot}/
 find %{buildroot} \( -type f -o -type l \) -printf '/%%P\n' | sort > %{name}.files
 
 %files -f %{name}.files
 
 %changelog
+* Wed Aug 26 2026 Yu Zhang <yu.zhang@oss.qualcomm.com> - 1.0.0-3
+- Switch to official Qualcomm Linux ath6kl-utils release tarball
+
 * Mon Aug 24 2026 Yu Zhang <yu.zhang@oss.qualcomm.com> - 1.0.0-2
 - Rebuild prebuilt payload from source package with vendored diag build inputs
 
