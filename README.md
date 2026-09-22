@@ -4,6 +4,11 @@ SPDX-License-Identifier: BSD-3-Clause
 -->
 # myftm RPM - CentOS Stream 10
 
+myftm is a command-line utility for exercising Qualcomm WLAN devices in
+Factory Test Mode (FTM). It provides a local interface for running WLAN
+factory tests. The package also provides test command libraries and
+development headers.
+
 This branch contains the CentOS Stream 10 RPM packaging for myftm from a Qualcomm Linux release tarball.
 
 ## Package
@@ -11,6 +16,7 @@ This branch contains the CentOS Stream 10 RPM packaging for myftm from a Qualcom
 | Field | Value |
 |---|---|
 | Package | myftm |
+| Summary | Command-line factory test utility for Qualcomm WLAN devices |
 | Version | 1.0.0 |
 | Source | ath6kl-utils_1.0.0_arm64.tar.gz |
 | Source checksum | See sources |

@@ -3,7 +3,7 @@
 Name:           myftm
 Version:        1.0.0
 Release:        1%{?dist}
-Summary:        Qualcomm WLAN myftm factory test utility
+Summary:        Command-line factory test utility for Qualcomm WLAN devices
 
 License:        Qualcomm.nologin.binaries.license
 Source0:        https://qartifactory-edge.qualcomm.com/artifactory/qsc_releases/software/chip/component/wlan-service.qclinux.0.0/260825/prebuilt_resolute/ath6kl-utils_%{version}_arm64.tar.gz
@@ -11,7 +11,10 @@ Source0:        https://qartifactory-edge.qualcomm.com/artifactory/qsc_releases/
 ExclusiveArch:  aarch64
 
 %description
-myftm is packaged from a Qualcomm Linux release tarball.
+myftm is a command-line utility for exercising Qualcomm WLAN devices in
+Factory Test Mode (FTM). It provides a local interface for running WLAN
+factory tests. The package also provides test command libraries and
+development headers.
 
 %prep
 %autosetup -c -n %{name}-%{version}
