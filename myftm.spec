@@ -25,9 +25,14 @@ development headers.
 %install
 mkdir -p %{buildroot}
 cp -a data/ath6kl-utils/arm64/. %{buildroot}/
+# Install license documents separately with %license.
+rm -f %{buildroot}%{_docdir}/ath6kl-utils/copyright
 find %{buildroot} \( -type f -o -type l \) -printf '/%%P\n' | sort > %{name}.files
 
 %files -f %{name}.files
+%license data/ath6kl-utils/arm64/usr/share/doc/ath6kl-utils/copyright
+%license data/LICENSE.qcom-2
+%license data/NOTICE
 
 %changelog
 * Fri Aug 21 2026 Yu Zhang <yu.zhang@oss.qualcomm.com> - 1.0.0-1

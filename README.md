@@ -31,6 +31,13 @@ The prebuilt payload installs:
 - /usr/lib/aarch64-linux-gnu/libtlvutil.a
 - /usr/lib/aarch64-linux-gnu/pkgconfig/ath6kl-utils.pc
 
+License documents are installed under `/usr/share/licenses/myftm/`
+and marked as license files in the RPM:
+
+- `copyright`
+- `LICENSE.qcom-2`
+- `NOTICE`
+
 ## Files
 
 - myftm.spec
