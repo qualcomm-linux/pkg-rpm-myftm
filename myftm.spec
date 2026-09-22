@@ -2,10 +2,10 @@
 
 Name:           myftm
 Version:        1.0.0
-Release:        3%{?dist}
+Release:        1%{?dist}
 Summary:        Qualcomm WLAN myftm factory test utility
 
-License:        Qualcomm-Technologies-Inc.-Proprietary
+License:        Qualcomm.nologin.binaries.license
 Source0:        https://qartifactory-edge.qualcomm.com/artifactory/qsc_releases/software/chip/component/wlan-service.qclinux.0.0/260825/prebuilt_resolute/ath6kl-utils_%{version}_arm64.tar.gz
 
 ExclusiveArch:  aarch64
